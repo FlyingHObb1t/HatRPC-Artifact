@@ -1,0 +1,30 @@
+
+
+# The lib dir includes dependencies
+# The bin/hatrpc_gen is the HatRPC code generator
+# The bin/atb_xxx are executables used in the evaluations
+
+# Usage:
+
+--------------------------------------------------------------------------------
+Latency:
+
+bin/atb_lat_server --port <port_no>
+bin/atb_lat_client --ip <server_ip> --port <port_no> --iter <n_iterations> --min <min payload size> --max <max payload size>
+
+--------------------------------------------------------------------------------
+Percentile Latency:
+
+bin/atb_plat_server --port <port_no> --clients <n_clients>
+bin/atb_plat_client --ip <server_ip> --port <port_no> --iter <n_iterations> --size <payload size> --threads <n_threads> --percentile <percentile value>
+--------------------------------------------------------------------------------
+Throughput:
+
+bin/atb_thr_server --port <port_no> --clients <n_clients>
+bin/atb_thr_client --ip <server_ip> --port <port_no> --iter <n_iterations> --size <payload size> --threads <n_threads>
+
+--------------------------------------------------------------------------------
+Mix Comm:
+
+bin/atb_thr_server --port <port_no> --clients <n_clients>
+bin/atb_thr_client --ip <server_ip> --port <port_no> --iter <n_iterations> --l_req_sz <latency request size> --l_res_sz <latency response size> --t_req_sz <throughput request size> --t_res_sz <throughput response size> --threads <n_threads> --latency_percent <percentage of latency functions>
