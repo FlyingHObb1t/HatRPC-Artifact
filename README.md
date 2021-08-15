@@ -3,7 +3,7 @@
 ## Introduction
 This is the README of the HatRPC (Hint-Accelerated Thrift RPC over RDMA). HatRPC exploits hints for users to define the behavior of RPC communication in a convenient and easy way. For details, please check out the paper: *HatRPC: Hint-Accelerated Thrift RPC over RDMA*
 
-This repository includes the necessary components to reproduce the results in the paper. **lib** contains libraries of HatRPC with its dependencies. **bin** contains the executables for the experiments and evaluations.** cluster_a_env.out** and **cluster_b_env.out** describe the hardware and environment information of cluster a and b in the evaluation setup section in the paper. **example** includes two example HatRPC idl (Interface Description Language) fles for generating templates for atb and ycsb experiments.
+This repository includes the necessary components to reproduce the results in the paper. **lib** contains libraries of HatRPC with its dependencies. **bin** contains the executables for the experiments and evaluations. **cluster_a_env.out** and **cluster_b_env.out** describe the hardware and environment information of cluster a and b in the evaluation setup section in the paper. **example** includes two example HatRPC idl (Interface Description Language) fles for generating templates for atb and ycsb experiments.
 
 ## Dependencies 
 All dependencies and the pre-compiled libraries are included in **lib**.
