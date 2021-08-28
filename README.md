@@ -3,13 +3,13 @@
 ## Introduction
 This is the README of the HatRPC (Hint-Accelerated Thrift RPC over RDMA). HatRPC exploits hints for users to define the behavior of RPC communication in a convenient and easy way. For details, please check out the paper: *HatRPC: Hint-Accelerated Thrift RPC over RDMA*
 
-This repository includes the necessary components to reproduce the results in the paper. **lib** contains libraries of HatRPC with its dependencies. **bin** contains the executables for the experiments and evaluations. **cluster_a_env.out** and **cluster_b_env.out** describe the hardware and environment information of cluster a and b in the evaluation setup section in the paper. **example** includes two example HatRPC idl (Interface Description Language) fles for generating templates for atb and ycsb experiments.
+This repository includes the necessary components to reproduce the results in the paper. **lib** contains libraries of HatRPC with its dependencies. **bin** contains the executables for the experiments and evaluations. **cluster_a_env.out** describes the hardware and environment information of the cluster in the evaluation setup section in the paper. **example** includes two example HatRPC idl (Interface Description Language) fles for generating templates for atb and ycsb experiments.
 
 ## Dependencies 
 All dependencies and the pre-compiled libraries are included in **lib**.
 HatRPC library is dependent on Gflags (v2.2.1), Glog (v0.3.5), Hwloc(v2.0), TBB(2019_U2) and our RDMA communication library Marlin.
 ATB and YCSB benchmark executables are dependent on Boost (v1.58.0)
-YCSB experiments are backed by Rocksdb (v6.22.1) with compression library Snappy (v1.1.8). Rocksdb's libraries are not included because of fle size limit. 
+YCSB experiments are backed by LMDB (v0.9.29). LMDB libraries are not included because of fle size limit. 
 
 ## Build
 All executables are pre-built and included in **bin** directory. The **bin/hatrpc_gen** is the HatRPC generator which takes HatRPC idl files as input and output generated templates with corresponding hints. For instance, to generate templates from atb_example.thrift in direcotry gen, one can use 
